@@ -23,6 +23,9 @@ jobs:
           port: 22
           script: |
             cd test-mono-cicd
+            git pull origin main
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
             pnpm install
             pnpm run build
             pm2 restart http-server
