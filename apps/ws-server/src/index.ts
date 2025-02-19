@@ -14,5 +14,5 @@ server.on("connection", async (socket) => {
     },
   });
   console.log(res);
-  socket.send("hi there you are connected to the ws server");
+  socket.send("hi there you are connected to the ws server successfully");
 });

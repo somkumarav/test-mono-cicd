@@ -5,7 +5,7 @@ export default async function Home() {
 
   return (
     <div>
-      <p>hello</p>
+      <p className='text-red-100'>hello world</p>
       <p>{data?.username}</p>
       <p>{data?.password}</p>
     </div>

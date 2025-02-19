@@ -5,16 +5,12 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("hi there");
+  res.send("hello world");
 });
 
 app.post("/signup", async (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
-
-  if (!req.body.username || !req.body.password) {
-    res.send("invalid data");
-  }
 
   const user = await prismaClient.user.create({
     data: {
@@ -24,7 +20,7 @@ app.post("/signup", async (req, res) => {
   });
 
   res.json({
-    msg: "user created",
+    msg: "user created successfully",
     id: user.id,
   });
 });
