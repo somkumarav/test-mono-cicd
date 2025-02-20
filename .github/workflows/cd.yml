@@ -28,4 +28,4 @@ jobs:
             source ~/.nvm/nvm.sh
             pnpm install
             pnpm run build
-            pm2 reload
+            pm2 reload all
