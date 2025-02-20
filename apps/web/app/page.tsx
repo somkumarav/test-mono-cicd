@@ -5,9 +5,9 @@ export default async function Home() {
 
   return (
     <div>
-      <p className='text-red-100'>hello world</p>
-      <p>{data?.username}</p>
-      <p>{data?.password}</p>
+      <p>Hello World!</p>
+      <p>username: {data?.username}</p>
+      <p>password: {data?.password}</p>
     </div>
   );
 }

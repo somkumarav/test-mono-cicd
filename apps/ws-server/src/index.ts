@@ -6,7 +6,6 @@ const server = new WebSocketServer({
 });
 
 server.on("connection", async (socket) => {
-  console.log("conn", socket);
   const res = await prismaClient.user.create({
     data: {
       username: Math.random().toString(),
@@ -14,5 +13,5 @@ server.on("connection", async (socket) => {
     },
   });
   console.log(res);
-  socket.send("hi there you are connected to the ws server successfully");
+  socket.send("Hi there you are connected to the ws server successfully");
 });

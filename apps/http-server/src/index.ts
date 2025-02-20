@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("hello world");
+  res.send("Hello, world!");
 });
 
 app.post("/signup", async (req, res) => {
@@ -20,8 +20,9 @@ app.post("/signup", async (req, res) => {
   });
 
   res.json({
-    msg: "user created successfully",
+    msg: "User created",
     id: user.id,
+    username: user.username,
   });
 });
 
