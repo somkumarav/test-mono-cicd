@@ -28,6 +28,4 @@ jobs:
             source ~/.nvm/nvm.sh
             pnpm install
             pnpm run build
-            pm2 restart http-server
-            pm2 restart web-app
-            pm2 restart ws-server
+            pm2 reload
